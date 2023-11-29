@@ -1,0 +1,23 @@
+<html>
+<head>
+    <title> Roman to Decimal Converter </title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}">
+</head>
+<body>
+    {% if decimal %}
+    <form action="{{ url_for('read_form')}}" method="post">
+        <input type="text" name="roman" placeholder="Enter a roman number" required class="number-input">
+        <br><br>
+        <input type="submit" value="Convert">
+        <br><br>
+        <label>{{ decimal }}</label>
+    </form>
+    {% else %}
+    <form action="{{ url_for('read_form')}}" method="post">
+        <input type="text" name="roman" placeholder="Enter a roman number" required class="number-input">
+        <br><br>
+        <input type="submit" value="Convert">
+    </form>
+    {% endif %}
+</body>
+</html>
